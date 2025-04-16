@@ -83,10 +83,12 @@ A modern and intuitive web application that helps users track their daily expens
 ```bash
 git clone https://github.com/your-username/personal-finance-visualizer.git
 cd personal-finance-visualizer
+```
 
 2. **Install dependencies** 
 ```bash
 npm install
+``` 
 
 3. **Configure .env**
 
@@ -95,3 +97,4 @@ MONGODB_URI=your_mongodb_connection_string
 4. **Run the development server**
 ```bash
 npm run dev
+```
