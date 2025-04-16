@@ -37,7 +37,7 @@ export default function DashboardPage() {
         fetchData();
       }, [fetchData]);
     
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <p className="min-h-screen flex flex-col justify-center items-center">Loading...</p>;
 
   return (
     <div className="flex flex-col justify-center items-center py-2 px-8 space-y-6">
