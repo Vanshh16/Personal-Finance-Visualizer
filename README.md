@@ -14,23 +14,84 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Finance Visualizer
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+A modern and intuitive web application that helps users track their daily expenses, set monthly budgets, and visualize their spending behavior. Built using **Next.js**, **MongoDB**, and **Tailwind CSS** with **Recharts**, the app ensures a smooth and insightful experience for managing personal finances.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+-  Add, edit, and delete your **expenses** and **budgets**
+-  Visualize monthly expenses with **bar and pie charts**
+-  Dashboard with **total spent**, **category breakdown**, and **latest transactions**
+-  Smart **insights** on budget usage
+-  Form validation using **Zod**
+-  API requests made using **Axios**
+-  Global state management for efficient data flow
+-  Responsive light theme UI using **Tailwind CSS**
+-  Backend powered by **MongoDB + Next.js API routes**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##  Project Structure
 
-## Deploy on Vercel
+ ├── app/
+│   ├── page.tsx              # Main Dashboard
+│   ├── transactions/         # Add/View/Edit transactions
+│   ├── budgets/              # Set/View/Edit budgets
+│   └── insights/             # Budget insights & analysis
+│
+├── components/
+│   ├── TransactionForm.tsx
+│   ├── BudgetForm.tsx
+│   ├── Charts/
+│   ├── DashboardSummary.tsx
+│   ├── Navbar.tsx
+│   └── Footer.tsx
+│
+├── lib/
+│   └── connectDB.ts          # MongoDB connection utility
+│
+├── models/
+│   ├── Transaction.js
+│   └── Budget.js
+│
+├── context/
+│   └── GlobalContext.jsx     # Global state management
+│
+└── styles/
+    └── globals.css
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ 
+---
+
+##  Tech Stack
+
+- **Frontend:** Next.js, React, Tailwind CSS, Recharts
+- **Backend:** MongoDB, Mongoose, Next.js API Routes
+- **Validation:** Zod
+- **HTTP:** Axios
+
+---
+
+##  Setup Instructions
+
+1. **Clone the repo:**
+
+```bash
+git clone https://github.com/your-username/personal-finance-visualizer.git
+cd personal-finance-visualizer
+
+2. **Install dependencies** 
+```bash
+npm install
+
+3. **Configure .env**
+
+MONGODB_URI=your_mongodb_connection_string
+
+4. **Run the development server**
+```bash
+npm run dev
